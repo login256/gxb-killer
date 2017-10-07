@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.2.2
 // @description  try to take over the world!
-// @author       CoderiGenius、login256(失焦不暂停)
+// @author       You
 // @match        *://buaa.class.gaoxiaobang.com/class/1953*/unit/*/chapter/*
 // @grant        none
 // ==/UserScript==
