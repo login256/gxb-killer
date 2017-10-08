@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         高校邦 课程 快进、跳题、跳页、失焦不暂停
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  Please change what to be matched if you want to use this in other pages. Try to take over the world!
 // @author       login256
 // @match        *://buaa.class.gaoxiaobang.com/class/1953*/unit/*/chapter/*
@@ -12,18 +12,13 @@
 	'use strict';
 	function check()
 	{
-		var videoTest=document.getElementsByClassName("gxb-icon-radio");
-		if(videoTest.length!==0)
+		if(document.getElementsByClassName("answer").length!==0)
 		{
-			for(var i=0;i<videoTest.length;i++)
-			{
-				videoTest[i].click();
-			}
 			if(document.getElementsByClassName('gxb-btn_ submit').length!==0) document.getElementsByClassName('gxb-btn_ submit')[0].click();
 			if(document.getElementsByClassName('gxb-btn_ next').length!==0) document.getElementsByClassName('gxb-btn_ next')[0].click();
 			if(document.getElementsByClassName('gxb-btn_ player').length!==0) document.getElementsByClassName('gxb-btn_ player')[0].click();
 		}
-		//出现视频内测验，由于不用选对，依次点击答案(其实好像根本不用选，但都写了，懒得删），并提交
+		//出现视频内测验，由于不用选对(根本不用选），直接提交
 		if(document.getElementsByClassName("player-video").length===0)
 		{
 			document.getElementsByClassName("gxb-next-blue")[0].click();
