@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         高校邦 课程 快进、跳题、跳页、失焦不暂停
 // @namespace    http://tampermonkey.net/
-// @version      1.1.2
+// @version      1.1.3
 // @description  Please change what to be matched if you want to use this in other pages. Try to take over the world!
 // @author       login256
 // @match        *://buaa.class.gaoxiaobang.com/class/1953*/unit/*/chapter/*
@@ -19,12 +19,11 @@
 			if(document.getElementsByClassName('gxb-btn_ player').length!==0) document.getElementsByClassName('gxb-btn_ player')[0].click();
 		}
 		//出现视频内测验，由于不用选对(根本不用选），直接提交
-		if(document.getElementsByClassName("player-video").length===0||document.getElementById("frm_pageViewer")!==null)
+		if(document.getElementsByClassName("loading_video_play_cxh").length===0)
 		{
 			document.getElementsByClassName("gxb-next-blue")[0].click();
 		}
 		//非课程页面跳过
-		//导学页面貌似有"fre_pageViewer",尝试用此跳过  有空仔细看看
 	}
 	function speedUp()
 	{
