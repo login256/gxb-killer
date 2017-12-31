@@ -4,7 +4,7 @@
 // @version      1.1.3
 // @description  Please change what to be matched if you want to use this in other pages. Try to take over the world!
 // @author       login256
-// @match        *://buaa.class.gaoxiaobang.com/class/1953*/unit/*/chapter/*
+// @match        *://buaa.class.gaoxiaobang.com/class/*/unit/*/chapter/*
 // @grant        none
 // ==/UserScript==
 
